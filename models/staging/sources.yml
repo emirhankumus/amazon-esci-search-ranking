@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: esci_raw             # dbt içinde kullanacağımız kısa takma ad
+    database: amazon-esci-search-ranking # Sizin Google Cloud Project ID
+    schema: esci_raw           # BigQuery Dataset adınız
+    tables:
+      - name: shopping_queries_examples
+      - name: shopping_queries_products
+      - name: shopping_queries_sources
