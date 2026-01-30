@@ -5,6 +5,7 @@
 - [Amazon E-commerce search ranking] images (amazon-esci-search-ranking/dashboards/AMAZON2.png)
 - [Amazon E-commerce search ranking] images (amazon-esci-search-ranking/dashboards/AMAZON3.png)
 - [Amazon E-commerce search ranking] images (amazon-esci-search-ranking/dashboards/AMAZON4.png)
+- [Amazon E-commerce search ranking] images (amazon-esci-search-ranking/dashboards/AMAZON5.png)
 
   
 This directory contains business and analytical dashboards created using:
