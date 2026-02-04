@@ -6,7 +6,7 @@ name: 'my_new_project'  # <-- TİRELERİ ALT ÇİZGİ YAPTIK
 version: '1.0.0'
 config-version: 2
 
-profile: 'amazon_esci'
+profile: 'default'
 
 model-paths: ["models"]
 analysis-paths: ["analyses"]
