@@ -2,11 +2,11 @@
 
 <div align="center">
 
-[![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![dbt](https://img.shields.io/badge/dbt-Analytics_Engineering-orange?logo=dbt&logoColor=white)](https://www.getdbt.com/)
-[![BigQuery](https://img.shields.io/badge/Google_Cloud-BigQuery-4285F4?logo=googlecloud&logoColor=white)](https://cloud.google.com/bigquery)
-[![HuggingFace](https://img.shields.io/badge/NLP-XLM--RoBERTa-yellow?logo=huggingface&logoColor=black)](https://huggingface.co/)
-[![Tableau](https://img.shields.io/badge/Visualization-Tableau-E97627?logo=tableau&logoColor=white)](https://www.tableau.com/)
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat-square&logo=dbt&logoColor=white)
+![BigQuery](https://img.shields.io/badge/Google%20BigQuery-4285F4?style=flat-square&logo=google-cloud&logoColor=white)
+![NLP](https://img.shields.io/badge/NLP-XLM--RoBERTa-green?style=flat-square)
+![Tableau](https://img.shields.io/badge/Visualization-Tableau-e97627?style=flat-square&logo=tableau&logoColor=white)
 
 **End-to-end ranking optimization project answering the question: "What did the user search for, and what did we show?" using Analytics Engineering & NLP.**
 
