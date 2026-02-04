@@ -83,15 +83,34 @@ flowchart TD
 ## Setup & Usage
 
 ### 1. Prerequisites
-* **Python 3.9+**
-* **Google Cloud Platform Account** (BigQuery & Cloud Storage enabled)
-* **dbt Core** (with BigQuery adapter)
+* **dbt Cloud Account** (Free Developer Plan is sufficient)
+* **Google Cloud Platform Account** (BigQuery enabled)
+* **Python 3.9+** (Only required for running ML notebooks locally or on Colab)
 
-### 2. Installation
-```bash
-# Clone the repository
-git clone [https://github.com/cevdetkopuz/amazon-esci-search-ranking.git](https://github.com/cevdetkopuz/amazon-esci-search-ranking.git)
-cd amazon-esci-search-ranking
+### 2. Data Pipeline Setup (dbt Cloud)
+This project is designed to run seamlessly on **dbt Cloud** without local installation.
 
-# Install Python dependencies (Transformers, dbt-bigquery, etc.)
-pip install -r requirements.txt
+1.  **Repository:** Fork or clone this repository to your GitHub account.
+2.  **Project Setup:** Create a new project in dbt Cloud and connect it to your GitHub repository.
+3.  **Connection:** Select **BigQuery** as the database. Upload your **Service Account JSON Key** (ensure the account has `BigQuery Admin` permissions).
+4.  **Execution:** inside the dbt Cloud IDE, run the following command to build the entire pipeline:
+    ```bash
+    dbt build
+    ```
+    *This command will seed the data, run all models (Staging -> Marts), and execute schema tests.*
+
+### 3. Model Training (NLP)
+The XLM-RoBERTa model training is a separate process handled via Python (Jupyter Notebooks).
+
+1.  Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+2.  Launch the training notebook:
+    ```bash
+    # Ensure your GCP Service Account credentials are accessible
+    jupyter notebook notebooks/03_model_training_xlm_roberta.ipynb
+    ```
+    *Note: You can also upload this notebook directly to Google Colab for GPU acceleration.*
+
+---
