@@ -114,3 +114,37 @@ The XLM-RoBERTa model training is a separate process handled via Python (Jupyter
     *Note: You can also upload this notebook directly to Google Colab for GPU acceleration.*
 
 ---
+
+## Key Results & Analysis
+
+### 1. Model Performance (Discrimination Power)
+The XLM-RoBERTa model demonstrated superior capability in distinguishing between relevant and irrelevant products across multiple languages, achieving over **90% separation power**. This proves the model's robustness in handling cross-lingual semantic search.
+
+**Test Case Examples:**
+
+| Locale | Query | Good Match (Score) | Bad Match (Score) | Discrimination Delta |
+| :--- | :--- | :--- | :--- | :--- |
+| **US (English)** | `gaming monitor 144hz` | ASUS (100%) | Logitech (5%) | **94%** |
+| **JP (Japanese)** | `炊飯器` (Rice Cooker) | Panasonic (100%) | Nike (2%) | **97%** |
+| **ES (Spanish)** | `teclado mecánico` | Logitech (100%) | Nespresso (5%) | **94%** |
+
+### 2. Business Insights
+Analysis of the dataset via dbt marts revealed critical insights for search optimization:
+* **Query Length Impact:** Relevance scores consistently drop as query length increases. Long-tail queries (>60 chars) are more prone to irrelevant results.
+* **Vocabulary Overlap:** High word overlap between query and product title does not guarantee relevance, highlighting the necessity of semantic models over keyword matching.
+
+### 3. Live Demo Interface
+A custom frontend was developed to visualize real-time ranking scores. The interface displays the **AI Confidence** score alongside product metadata, allowing for immediate validation of model predictions.
+
+---
+
+## Contributors
+
+This project was collaboratively developed by the following team:
+
+| Name | GitHub | LinkedIn |
+| :--- | :--- | :--- |
+| **Cevdet Kopuz** | [cevdetkopuz](https://github.com/cevdetkopuz) | [Profile](https://www.linkedin.com/in/cevdetkopuz/) |
+| **Cem Özdoğan** | [gcemozdogan](https://github.com/gcemozdogan) | [Profile](https://www.linkedin.com/in/gcemozdogan/?locale=en_US) |
+| **Zehra İstemihan** | [zistemihan](https://github.com/zistemihan) | [Profile](https://www.linkedin.com/in/zehraistemihan) |
+| **Emirhan Kümüş** | [emirhankumus](https://github.com/emirhankumus) | [Profile](https://www.linkedin.com/in/emirhankumus/) |
